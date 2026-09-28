@@ -1,0 +1,32 @@
+name: App request
+description: Suggest a feature, improvement, language correction, or data update.
+title: "[Request] "
+labels:
+  - app-request
+body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - Feature request
+        - Improvement
+        - Bug report
+        - Language correction
+        - Data correction
+    validations:
+      required: true
+  - type: textarea
+    id: requested-change
+    attributes:
+      label: Requested change
+      description: What should change, and why would it help?
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: 1.0.1
+    validations:
+      required: true
